@@ -12,7 +12,7 @@ const AboutMe: React.FC = () => {
       setDisplayed(name.slice(0, i + 1));
       i++;
       if (i === name.length) clearInterval(timer);
-    }, 120);
+    }, 180);
     return () => clearInterval(timer);
   }, []);
 
@@ -24,9 +24,14 @@ const AboutMe: React.FC = () => {
         className="h-90 object-cover shadow-lg to-purple-500 mb-6 md:mb-0 md:mr-10 relative"
       />
       <div className="text-center md:text-left">
-        <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 tracking-wide mb-4">
+        <h1
+          className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-white-100 to-blue-400 tracking-wide mb-4"
+          style={{ textShadow: "0 0 2px #3b82f6, 0 0 1px #fff" }}
+        >
           {displayed}
-          <span className="animate-pulse text-purple-400">|</span>
+          {displayed.length < name.length && (
+            <span className="animate-pulse text-blue-600">|</span>
+          )}
         </h1>
         <p className="text-gray-300 text-lg max-w-xl">{summary}</p>
       </div>

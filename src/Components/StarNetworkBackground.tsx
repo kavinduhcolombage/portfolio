@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
-const STAR_COUNT = 80;
-const STAR_SIZE = 2;
+const STAR_COUNT = 60;
+const STAR_SIZE = 1;
 const STAR_COLOR = "#fff";
 const LINE_COLOR = "rgba(255,255,255,0.2)";
 const LINE_DISTANCE = 120;
@@ -14,6 +14,7 @@ const StarNetworkBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const stars = useRef<{ x: number; y: number; vx: number; vy: number }[]>([]);
   const animationRef = useRef<number>(0);
+  const cursor = useRef<{ x: number; y: number } | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -30,8 +31,8 @@ const StarNetworkBackground: React.FC = () => {
     stars.current = Array.from({ length: STAR_COUNT }, () => ({
       x: randomBetween(0, width),
       y: randomBetween(0, height),
-      vx: randomBetween(-0.3, 0.3),
-      vy: randomBetween(-0.3, 0.3),
+      vx: randomBetween(-0.1, 0.1),
+      vy: randomBetween(-0.1, 0.1),
     }));
 
     function animate() {
@@ -73,6 +74,26 @@ const StarNetworkBackground: React.FC = () => {
         }
       }
 
+      // Draw cursor star and connect to nearby stars
+      if (cursor.current) {
+        ctx.beginPath();
+        ctx.arc(cursor.current.x, cursor.current.y, STAR_SIZE + 1, 0, Math.PI * 2);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+
+        for (const star of stars.current) {
+          const dist = Math.hypot(cursor.current.x - star.x, cursor.current.y - star.y);
+          if (dist < LINE_DISTANCE) {
+            ctx.beginPath();
+            ctx.moveTo(cursor.current.x, cursor.current.y);
+            ctx.lineTo(star.x, star.y);
+            ctx.strokeStyle = "rgba(255,255,255,0.5)";
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+
       animationRef.current = requestAnimationFrame(animate);
     }
 
@@ -87,8 +108,22 @@ const StarNetworkBackground: React.FC = () => {
     };
     window.addEventListener("resize", handleResize);
 
+    // Handle mouse move
+    const handleMouseMove = (e: MouseEvent) => {
+      cursor.current = { x: e.clientX, y: e.clientY };
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+
+    // Handle mouse leave
+    const handleMouseLeave = () => {
+      cursor.current = null;
+    };
+    window.addEventListener("mouseleave", handleMouseLeave);
+
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseleave", handleMouseLeave);
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
   }, []);

@@ -1,4 +1,3 @@
-import CustomCursor from "../Components/CustomCursor";
 import Navbar from "../Components/Navbar";
 import StarNetworkBackground from "../Components/StarNetworkBackground";
 import AboutMe from "../Sections/AboutMe";
