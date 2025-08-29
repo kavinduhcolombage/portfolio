@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const name = "Kavindu Hansana";
-const summary = "A passionate developer specializing in modern web technologies, always eager to learn and create impactful solutions.";
+const summary = "Final-year Computer Science student at the University of Sri Jayewardenepura with experience in full-stack development using Java, Spring Boot, Python, and React. Skilled in building scalable web applications, with exposure to cloud computing, Docker, and Kubernetes. Strong problem-solver passionate about innovative software solutions.";
 
 const AboutMe: React.FC = () => {
   const [displayed, setDisplayed] = useState("");
@@ -19,9 +19,9 @@ const AboutMe: React.FC = () => {
   return (
     <section className="flex flex-col md:flex-row items-center justify-center min-h-[60vh] bg-black px-6 py-12">
       <img
-        src="/your-image.jpg"
+        src="/me.png"
         alt="Kavindu Hansana"
-        className="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-gradient-to-r from-blue-500 to-purple-500 mb-6 md:mb-0 md:mr-10"
+        className="h-90 object-cover shadow-lg to-purple-500 mb-6 md:mb-0 md:mr-10 relative"
       />
       <div className="text-center md:text-left">
         <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 tracking-wide mb-4">
