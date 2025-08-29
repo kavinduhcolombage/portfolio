@@ -1,12 +1,11 @@
 const Navbar = () => {
   return (
-    <nav className="bg-black border-b-4 border-transparent relative">
-      <div className="absolute left-0 right-0 top-full h-1"></div>
-      <div className="container mx-auto flex items-center justify-between py-8 px-6">
-        <h1 className="text-3xl font-bold text-white bg-clip-text">
+    <nav className="border-b-4 border-transparent relative">
+      <div className="flex items-center justify-between py-8 px-6 mx-8">
+        <h1 className="text-3xl max-[900px]:text-2xl font-bold text-white bg-clip-text">
           Kavindu's Portfolio
         </h1>
-        <ul className="flex space-x-8 text-lg text-white">
+        <ul className="flex space-x-8 max-[700px]:hidden [&>*]:text-lg max-[900px]:[&>*]:text-base [&>*]:text-white ">
           <li>
             <a href="#about" className="hover:text-purple-400 transition font-medium">
               About

@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from "react";
 
-const STAR_COUNT = 60;
+const STAR_COUNT = 50;
 const STAR_SIZE = 1;
 const STAR_COLOR = "#fff";
 const LINE_COLOR = "rgba(255,255,255,0.2)";
-const LINE_DISTANCE = 120;
+const LINE_DISTANCE = 180;
 
 function randomBetween(a: number, b: number) {
   return a + Math.random() * (b - a);
