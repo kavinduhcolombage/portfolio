@@ -1,6 +1,7 @@
 import Navbar from "../Components/Navbar";
 import StarNetworkBackground from "../Components/StarNetworkBackground";
 import AboutMe from "../Sections/Aboutme";
+import Education from "../Sections/Education";
 import Introduction from "../Sections/Introduction";
 
 const Portfolio = () => {
@@ -10,6 +11,7 @@ const Portfolio = () => {
             <Navbar />
             <Introduction />
             <AboutMe />
+            <Education/>
         </div>
     );
 };
