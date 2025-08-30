@@ -1,39 +1,29 @@
-import React, { useEffect, useState } from "react";
-
-const name = "Kavindu Hansana";
-const summary = "Final-year Computer Science student at the University of Sri Jayewardenepura with experience in full-stack development using Java, Spring Boot, Python, and React. Skilled in building scalable web applications, with exposure to cloud computing, Docker, and Kubernetes. Strong problem-solver passionate about innovative software solutions.";
-
-const AboutMe: React.FC = () => {
-  const [displayed, setDisplayed] = useState("");
-
-  useEffect(() => {
-    let i = 0;
-    const timer = setInterval(() => {
-      setDisplayed(name.slice(0, i + 1));
-      i++;
-      if (i === name.length) clearInterval(timer);
-    }, 180);
-    return () => clearInterval(timer);
-  }, []);
-
+const AboutMe = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center min-h-[60vh] bg-black px-6 py-12 max-[400px]:py-4">
-      <img
-        src="/me.png"
-        alt="Kavindu Hansana"
-        className="h-90 max-[900px]:h-80 object-cover shadow-lg to-purple-500 mb-6 md:mb-0 mr-10 max-[900px]:mr-5 relative"
-      />
-      <div className="text-center md:text-left">
-        <h1
-          className="text-5xl max-[900px]:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-white-100 to-blue-400 tracking-wide mb-4"
-          style={{ textShadow: "0 0 2px #3b82f6, 0 0 1px #fff" }}
-        >
-          {displayed}
-          {displayed.length < name.length && (
-            <span className="animate-pulse text-blue-600">|</span>
-          )}
-        </h1>
-        <p className="text-gray-300 text-lg max-[900px]:text-base max-w-xl">{summary}</p>
+    <section className="relative flex flex-col items-center justify-center min-h-[50vh] px-6 py-12">
+      {/* Glowing stars background effect */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="w-full h-full bg-gradient-to-br from-black via-blue-900 to-black opacity-30"></div>
+        {/* Add more decorative elements if you want */}
+      </div>
+      <div className="relative z-10 text-center max-w-2xl">
+        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-white to-blue-900 drop-shadow-lg mb-6">
+          About Me
+        </h2>
+        <p className="text-lg text-gray-200 mb-6 leading-relaxed drop-shadow">
+          Hi, I'm a passionate explorer of the digital universe, currently navigating the world of web development and software engineering. My journey is fueled by curiosity, creativity, and a love for building beautiful, functional experiences. Whether I'm coding late into the night or dreaming up new ideas, I strive to bring a bit of cosmic wonder to every project I touch.
+        </p>
+        <div className="flex flex-col items-center gap-2">
+          <span className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-700 via-purple-700 to-pink-700 text-white text-sm font-semibold shadow-lg">
+            🚀 Full-stack Developer
+          </span>
+          {/* <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-700 via-pink-700 to-blue-700 text-white text-sm font-semibold shadow-lg">
+            🌌 Galaxy Theme Enthusiast
+          </span>
+          <span className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-700 via-blue-700 to-purple-700 text-white text-sm font-semibold shadow-lg">
+            💡 Always Learning & Creating
+          </span> */}
+        </div>
       </div>
     </section>
   );
