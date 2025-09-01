@@ -5,6 +5,7 @@ const projects = [
         description: "A web application developed with React, Vite, Tailwind CSS, Mantine, React Router, and state management. Uni Connect helps university students find internships and connect with opportunities.",
         link: "https://github.com/kavinduhcolombage/UniConnect_Frontend.git"
     },
+    //test
     // {
     //     title: "Galaxy Explorer",
     //     image: "/projects/galaxy-explorer.png",
