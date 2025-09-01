@@ -3,6 +3,7 @@ import StarNetworkBackground from "../Components/StarNetworkBackground";
 import AboutMe from "../Sections/Aboutme";
 import Education from "../Sections/Education";
 import Introduction from "../Sections/Introduction";
+import Project from "../Sections/Project";
 
 const Portfolio = () => {
     return (
@@ -12,6 +13,7 @@ const Portfolio = () => {
             <Introduction />
             <AboutMe />
             <Education/>
+            <Project/>
         </div>
     );
 };
