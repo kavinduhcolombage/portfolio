@@ -31,9 +31,6 @@ const ContactMe = () => {
             Send Message
           </button>
         </form>
-        <div className="mt-8 text-gray-400 text-sm">
-          Or email me directly : <a href="mailto:hansana2024@email.com" className="text-blue-400 underline">hansana2024@email.com</a>
-        </div>
       </div>
     </section>
   );
