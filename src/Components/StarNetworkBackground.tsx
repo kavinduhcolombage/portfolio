@@ -1,16 +1,25 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
+import { useMediaQuery } from '@mantine/hooks';
 
-const STAR_COUNT = 50;
 const STAR_SIZE = 1;
 const STAR_COLOR = "#fff";
 const LINE_COLOR = "rgba(255,255,255,0.2)";
-const LINE_DISTANCE = 180;
+
 
 function randomBetween(a: number, b: number) {
   return a + Math.random() * (b - a);
 }
 
-const StarNetworkBackground: React.FC = () => {
+const StarNetworkBackground = () => {
+  const matches = useMediaQuery('(max-width: 400px)');
+  const DEFAULT_STAR_COUNT = 50;
+  const SMALL_SCREEN_STAR_COUNT = 30;
+  const starCount = matches ? SMALL_SCREEN_STAR_COUNT : DEFAULT_STAR_COUNT;
+
+  const DEFAULT_LINE_DISTANCE = 180;
+  const SMALL_SCREEN_LINE_DISTANCE = 100;
+  const LINE_DISTANCE = matches ? SMALL_SCREEN_LINE_DISTANCE : DEFAULT_LINE_DISTANCE;
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const stars = useRef<{ x: number; y: number; vx: number; vy: number }[]>([]);
   const animationRef = useRef<number>(0);
@@ -28,7 +37,7 @@ const StarNetworkBackground: React.FC = () => {
     canvas.height = height;
 
     // Initialize stars
-    stars.current = Array.from({ length: STAR_COUNT }, () => ({
+    stars.current = Array.from({ length: starCount }, () => ({
       x: randomBetween(0, width),
       y: randomBetween(0, height),
       vx: randomBetween(-0.1, 0.1),
@@ -58,8 +67,8 @@ const StarNetworkBackground: React.FC = () => {
       }
 
       // Draw lines between close stars
-      for (let i = 0; i < STAR_COUNT; i++) {
-        for (let j = i + 1; j < STAR_COUNT; j++) {
+      for (let i = 0; i < starCount; i++) {
+        for (let j = i + 1; j < starCount; j++) {
           const a = stars.current[i];
           const b = stars.current[j];
           const dist = Math.hypot(a.x - b.x, a.y - b.y);
@@ -126,7 +135,7 @@ const StarNetworkBackground: React.FC = () => {
       window.removeEventListener("mouseleave", handleMouseLeave);
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
-  }, []);
+  }, [starCount]);
 
   return (
     <canvas
