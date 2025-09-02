@@ -7,7 +7,7 @@ const AboutMe = () => {
         {/* Add more decorative elements if you want */}
       </div>
       <div className="relative z-10 text-center max-w-2xl">
-        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 drop-shadow-lg mb-6">
+        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700 drop-shadow-lg mb-6">
           About Me
         </h2>
         <p className="text-lg text-gray-200 mb-6 leading-relaxed drop-shadow">
