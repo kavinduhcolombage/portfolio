@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <nav className="border-b-4 border-transparent relative">
-      <div className="flex items-center justify-between py-8 px-6 mx-8">
+      <div className="flex items-center justify-between py-8 px-6 mx-8 max-[400px]:mx-1">
         <h1 className="text-3xl max-[900px]:text-2xl font-bold text-white bg-clip-text">
           Kavindu's Portfolio
         </h1>

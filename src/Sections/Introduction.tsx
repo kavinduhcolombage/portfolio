@@ -51,7 +51,7 @@ const Introduction: React.FC = () => {
             <span className="animate-pulse text-blue-700">|</span>
           )}
         </h1>
-        <p className="text-gray-300 text-lg max-[900px]:text-base max-w-xl">{summary}</p>
+        <p className="text-gray-200 text-lg max-[900px]:text-base max-w-xl">{summary}</p>
       </div>
     </section>
   );

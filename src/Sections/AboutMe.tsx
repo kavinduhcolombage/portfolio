@@ -7,10 +7,10 @@ const AboutMe = () => {
         {/* Add more decorative elements if you want */}
       </div>
       <div className="relative z-10 text-center max-w-2xl">
-        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700 drop-shadow-lg mb-6">
+        <h2 className="text-4xl max-[400px]:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700 drop-shadow-lg mb-6">
           About Me
         </h2>
-        <p className="text-lg text-gray-200 mb-6 leading-relaxed drop-shadow">
+        <p className="text-lg max-[900px]:text-base text-gray-200 mb-6 leading-relaxed drop-shadow">
           Hi, I'm a passionate explorer of the digital universe, currently navigating the world of web development and software engineering. My journey is fueled by curiosity, creativity, and a love for building beautiful, functional experiences. Whether I'm coding late into the night or dreaming up new ideas, I strive to bring a bit of cosmic wonder to every project I touch.
         </p>
         <div className="flex flex-col items-center gap-2">

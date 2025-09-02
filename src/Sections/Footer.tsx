@@ -3,11 +3,11 @@ const Footer = () => {
         <footer className="relative bg-black py-6 mt-12">
             {/* Gradient top border */}
             <div className="absolute left-0 right-0 top-0 h-0.5 bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700"></div>
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
-                <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700 drop-shadow">
+            <div className="container mx-auto flex max-[400px]:flex-wrap-reverse items-center justify-between max-[400px]:justify-center  px-6 gap-5">
+                <div className="text-lg max-[400px]:text-sm font-bold max-[400px]:font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700 drop-shadow max-[400px]:justify-center">
                     © {new Date().getFullYear()} Kavindu Hansana. All rights reserved.
-                </span>
-                <div className="flex space-x-6 mt-4 md:mt-0">
+                </div>
+                <div className="flex space-x-6">
                     <a
                         href="https://github.com/kavinduhcolombage"
                         target="_blank"
