@@ -44,15 +44,14 @@ const Introduction: React.FC = () => {
       <div className="text-center md:text-left">
         <h1 className="text-5xl max-[900px]:text-4xl font-bold">Hi, I'm</h1>
         <h1
-          className="text-5xl max-[900px]:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-white-100 to-blue-400 tracking-wide mb-4"
-          style={{ textShadow: "0 0 2px #3b82f6, 0 0 1px #fff" }}
+          className="text-5xl max-[900px]:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700 tracking-wide mb-4"
         >
           {displayed}
           {(phase === 'show' && displayed.length < name.length) && (
-            <span className="animate-pulse text-blue-600">|</span>
+            <span className="animate-pulse text-blue-700">|</span>
           )}
         </h1>
-        <p className="text-gray-300 text-lg max-[900px]:text-base max-w-xl">{summary}</p>
+        <p className="text-gray-200 text-lg max-[900px]:text-base max-w-xl">{summary}</p>
       </div>
     </section>
   );

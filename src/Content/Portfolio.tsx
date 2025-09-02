@@ -1,7 +1,9 @@
 import Navbar from "../Components/Navbar";
 import StarNetworkBackground from "../Components/StarNetworkBackground";
 import AboutMe from "../Sections/AboutMe";
+import ContactMe from "../Sections/ContactMe";
 import Education from "../Sections/Education";
+import Footer from "../Sections/Footer";
 import Introduction from "../Sections/Introduction";
 import Project from "../Sections/Project";
 
@@ -12,8 +14,10 @@ const Portfolio = () => {
             <Navbar />
             <Introduction />
             <AboutMe />
-            <Education/>
-            <Project/>
+            <Education />
+            <Project />
+            <ContactMe />
+            <Footer />
         </div>
     );
 };

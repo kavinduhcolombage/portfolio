@@ -5,32 +5,39 @@ const projects = [
         description: "A web application developed with React, Vite, Tailwind CSS, Mantine, React Router, and state management. Uni Connect helps university students find internships and connect with opportunities.",
         link: "https://github.com/kavinduhcolombage/UniConnect_Frontend.git"
     },
-    //test
-    // {
-    //     title: "Galaxy Explorer",
-    //     image: "/projects/galaxy-explorer.png",
-    //     description: "A web app to visualize and explore galaxies in 3D space. Built with React, Three.js, and Tailwind CSS.",
-    //     link: "https://github.com/yourusername/galaxy-explorer",
-    // },
-    // {
-    //     title: "Star Network Chat",
-    //     image: "/projects/star-network-chat.png",
-    //     description: "A real-time chat application with a cosmic theme, featuring animated backgrounds and secure messaging.",
-    //     link: "https://github.com/yourusername/star-network-chat",
-    // },
-    // {
-    //     title: "Nebula Portfolio",
-    //     image: "/projects/nebula-portfolio.png",
-    //     description: "A personal portfolio template inspired by nebulae, with interactive sections and smooth animations.",
-    //     link: "https://github.com/yourusername/nebula-portfolio",
-    // },
+    {
+        title: "SpeakZ – Public Speaking Assistant Robot",
+        image: "/projects/speakz.png",
+        description: "An interactive robot assistant for public speaking practice with real-time user tracking and speech analysis, powered by Azure Cognitive Services and Python.",
+        link: "https://github.com/kavinduhcolombage/robotic-project.git"
+    },
+    {
+        title: "E-Learning System Backend",
+        image: "/projects/elearn.png",
+        description: "Developed a secure REST API for a university e-learning platform with role-based authentication, user management, and JWT-based security.",
+        link: "https://github.com/kavinduhcolombage/ELearningBackEnd.git"
+    },
+    {
+        title: "PhoneStore",
+        image: "/projects/estore.png",
+        description: "A simple smartphone selling website built with HTML, CSS, and JavaScript. Includes a home page with featured smartphones, product listings with details and prices, and a contact form for inquiries.",
+        link: "https://github.com/kavinduhcolombage/phoneStore.git"
+    },
+    {
+        title: "COVID-19 Pandemic Analysis in Belgium",
+        image: "/projects/covid.png",
+        description: "Conducted an in-depth data analysis of the COVID-19 pandemic’s impact on Belgium using R. Performed exploratory data analysis, created dynamic visualizations, and carried out cross-country comparisons to identify key patterns, anomalies, and insights.",
+        link: "https://github.com/kavinduhcolombage/R-project-on-Covid-19-pandemic-in-Belgium.git"
+    }
+
+
 ];
 
 const Project = () => {
     return (
         <section className="relative flex flex-col items-center justify-center min-h-[50vh] px-24 max-[400px]:px-10 py-12">
             <div className="relative z-10 text-center w-full">
-                <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 drop-shadow-lg mb-10">
+                <h2 className="text-4xl max-[400px]:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700 drop-shadow-lg mb-10">
                     Projects
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
