@@ -18,16 +18,16 @@ const Loading: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
 
   useEffect(() => {
     if (currentLine < commands.length) {
-      const timer = setTimeout(() => setCurrentLine(currentLine + 1), 400);
+      const timer = setTimeout(() => setCurrentLine(currentLine + 1), 300);
       return () => clearTimeout(timer);
     } else {
-      setTimeout(onFinish, 800);
+      setTimeout(onFinish, 2000);
     }
   }, [currentLine, onFinish]);
 
   return (
-    <div className="flex items-center justify-center h-screen w-screen bg-black">
-      <div className="w-full max-w-xl bg-gray-900 rounded-lg shadow-lg p-6 font-mono text-green-400 text-sm">
+    <div className="flex items-center justify-center h-screen bg-black p-3">
+      <div className="w-1/2 max-[400px]:w-screen bg-black rounded-lg shadow-lg p-10 max-[400px]:p-2 font-mono text-white text-base max-[400px]:text-sm border border-white">
         {commands.slice(0, currentLine).map((cmd, idx) => (
           <div key={idx}>{cmd}</div>
         ))}
