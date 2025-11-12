@@ -1,4 +1,5 @@
-import { useEffect, useRef, FC } from 'react';
+import { useEffect, useRef } from 'react';
+import type { FC } from "react";
 import * as THREE from 'three';
 import { BloomEffect, EffectComposer, EffectPass, RenderPass, SMAAEffect, SMAAPreset } from 'postprocessing';
 
@@ -534,7 +535,7 @@ class CarLights {
       )
     });
 
-    material.onBeforeCompile = shader => {
+    material.onBeforeCompile = (shader :any) => {
       shader.vertexShader = shader.vertexShader.replace(
         '#include <getDistortion_vertex>',
         typeof this.options.distortion === 'object' ? this.options.distortion.getDistortion : ''
@@ -750,7 +751,7 @@ class Road {
     this.uTime = { value: 0 };
   }
 
-  createPlane(side: number, width: number, isRoad: boolean) {
+  createPlane(side: number, _width: number, isRoad: boolean) {
     const options = this.options;
     const segments = 100;
     const geometry = new THREE.PlaneGeometry(
