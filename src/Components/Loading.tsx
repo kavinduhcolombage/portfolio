@@ -1,14 +1,26 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Hyperspeed from "./Hyperspeed/Hyperspeed";
+import TextType from "./TextType/TextType";
 
 const Loading: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
 
-  useEffect(() => {
-      setTimeout(onFinish, 8000);
-  }, []);
+    const texts = [
+        "Engines online…",
+        "Accelerating through creativity…",
+        "Welcome to Kavindu’s Portfolio !",
+        "Loading...",
+    ];
 
-  return (
-    <div className="relative min-h-screen bg-black text-white overflow-hidden">
+    const handleSentenceComplete = (_sentence: string, index: number) => {
+        if (index === texts.length - 2) {   //use 2 because this not identifeid when last senetce not finshed
+            setTimeout(() => {
+                onFinish();
+            }, 1800);
+        }
+    };
+
+    return (
+        <div className="relative min-h-screen bg-black text-white overflow-hidden">
             {/* Hyperspeed animation */}
             <div className="absolute inset-0 pointer-events-none z-0">
                 <Hyperspeed
@@ -54,10 +66,19 @@ const Loading: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
 
             {/* Name on top */}
             <h1 className="absolute inset-0 flex items-center justify-center text-6xl md:text-8xl font-bold z-10 pointer-events-none">
-                Kavindu Hansana
+                <TextType
+                    text={texts}
+                    typingSpeed={75}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    className="text-6xl"
+                    loop={false}
+                    onSentenceComplete={handleSentenceComplete}
+                />
             </h1>
         </div>
-  );
+    );
 };
 
 export default Loading;
