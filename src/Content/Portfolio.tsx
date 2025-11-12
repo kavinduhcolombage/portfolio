@@ -1,5 +1,5 @@
+import DarkVeil from "../Components/DarkVeli/DarkVeil";
 import Navbar from "../Components/Navbar";
-import StarNetworkBackground from "../Components/StarNetworkBackground";
 import AboutMe from "../Sections/AboutMe";
 import ContactMe from "../Sections/ContactMe";
 import Education from "../Sections/Education";
@@ -9,8 +9,13 @@ import Project from "../Sections/Project";
 
 const Portfolio = () => {
     return (
-        <div className="bg-black text-white min-h-screen">
-            <StarNetworkBackground />
+        <div className="relative w-full">
+            {/* Background */}
+            <div className="fixed inset-0 -z-10">
+                <DarkVeil />
+            </div>
+
+            {/* Foreground content */}
             <Navbar />
             <Introduction />
             <AboutMe />
@@ -18,6 +23,7 @@ const Portfolio = () => {
             <Project />
             <ContactMe />
             <Footer />
+
         </div>
     );
 };
