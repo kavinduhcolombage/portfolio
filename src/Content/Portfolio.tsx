@@ -9,7 +9,7 @@ import Project from "../Sections/Project";
 
 const Portfolio = () => {
     return (
-        <div className="relative w-full">
+        <div className="relative min-h-screen w-full">
             {/* Background */}
             <div className="fixed inset-0 -z-10">
                 <DarkVeil />
