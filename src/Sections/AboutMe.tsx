@@ -1,6 +1,6 @@
 const AboutMe = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[50vh] px-6 py-12">
+    <section id="about" className="relative flex flex-col items-center justify-center min-h-[50vh] px-6 py-12">
       {/* Glowing stars background effect */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="w-full h-full opacity-30"></div>
