@@ -35,11 +35,11 @@ const Introduction: React.FC = () => {
   }, [phase]);
 
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center min-h-[60vh] px-6 py-12 max-[400px]:py-4">
+    <section className="flex flex-col md:flex-row items-center justify-center min-h-[60vh] px-6 py-12 max-[450px]:py-13 pt-50">
       <img
         src="/me.png"
         alt="Kavindu Hansana"
-        className="h-90 max-[900px]:h-80 object-cover shadow-lg to-purple-500 mb-6 md:mb-0 mr-10 max-[900px]:mr-5 relative"
+        className="h-90 max-[900px]:h-80 max-[400px]:h-70 object-cover shadow-lg to-purple-500 mb-6 md:mb-0 mr-10 max-[900px]:mr-5 relative"
       />
       <div className="text-center md:text-left">
         <h1 className="text-5xl max-[900px]:text-4xl text-white font-bold">Hi, I'm</h1>
