@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Hyperspeed from "./Hyperspeed";
+import Hyperspeed from "./Hyperspeed/Hyperspeed";
 
 const Loading: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
 
