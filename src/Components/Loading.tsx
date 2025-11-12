@@ -72,7 +72,7 @@ const Loading: React.FC<{ onFinish: () => void }> = ({ onFinish }) => {
                     pauseDuration={1500}
                     showCursor={true}
                     cursorCharacter="|"
-                    className="text-6xl"
+                    className="text-6xl max-[400px]:text-3xl text-center max-[400px]:p-2"
                     loop={false}
                     onSentenceComplete={handleSentenceComplete}
                 />
