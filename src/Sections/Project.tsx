@@ -12,24 +12,42 @@ const projects = [
         link: "https://github.com/kavinduhcolombage/robotic-project.git"
     },
     {
+        title: "To-Do List Manager",
+        image: "/projects/todolist.png",
+        description: "A Java desktop app for efficient task management using custom linked lists and sorting algorithms, allowing users to add, update, delete, and track tasks easily.",
+        link: "https://github.com/kavinduhcolombage/To-Do-Application.git"
+    }
+    ,
+    {
         title: "E-Learning System Backend",
         image: "/projects/elearn.png",
         description: "Developed a secure REST API for a university e-learning platform with role-based authentication, user management, and JWT-based security.",
         link: "https://github.com/kavinduhcolombage/ELearningBackEnd.git"
     },
     {
+        title: "COVID-19 Pandemic Analysis in Belgium",
+        image: "/projects/covid.png",
+        description: "Analyzed COVID-19’s impact in Belgium using R through exploratory analysis, dynamic visualizations, and cross-country comparisons to uncover key insights.",
+        link: "https://github.com/kavinduhcolombage/R-project-on-Covid-19-pandemic-in-Belgium.git"
+    },
+    {
+        title: "Penny - The Smart Robotic Pen Holder",
+        image: "/projects/penny.png",
+        description: "An AI-powered, voice-controlled, and motion-activated robotic pen holder with Android app integration, smart automation, and interactive features for effortless workspace organization.",
+        link: "https://github.com/kavinduhcolombage/smart-penny-mobile-app.git"
+    },
+    {
+        title: "Airline Passenger Satisfaction Prediction",
+        image: "/projects/airline_satisfaction.png",
+        description: "A machine learning project that analyzes airline passenger feedback and predicts satisfaction levels using models like Random Forest, SVM, and XGBoost for high accuracy.",
+        link: "https://github.com/kavinduhcolombage/Airline-Passenger-Satisfaction-Analysis.git"
+    },
+    {
         title: "PhoneStore",
         image: "/projects/estore.png",
         description: "A simple smartphone selling website built with HTML, CSS, and JavaScript. Includes a home page with featured smartphones, product listings with details and prices, and a contact form for inquiries.",
         link: "https://github.com/kavinduhcolombage/phoneStore.git"
-    },
-    {
-        title: "COVID-19 Pandemic Analysis in Belgium",
-        image: "/projects/covid.png",
-        description: "Conducted an in-depth data analysis of the COVID-19 pandemic’s impact on Belgium using R. Performed exploratory data analysis, created dynamic visualizations, and carried out cross-country comparisons to identify key patterns, anomalies, and insights.",
-        link: "https://github.com/kavinduhcolombage/R-project-on-Covid-19-pandemic-in-Belgium.git"
     }
-
 
 ];
 
